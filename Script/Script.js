@@ -20,7 +20,7 @@ function showTab2(tabId2) {
 let stream;
 
         document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('form22').addEventListener('click', function() {
+            document.getElementById('cuadro').addEventListener('click', function() {
                 // Verifica que el navegador soporta la API de MediaDevices
                 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                     // Solicita acceso a la cámara web
@@ -55,7 +55,7 @@ let stream;
 
 let stream2;
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('micStartButton').addEventListener('click', function() {
+    document.getElementById('form32').addEventListener('click', function() {
         // Verifica que el navegador soporta la API de MediaDevices
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             // Solicita acceso al micrófono
