@@ -17,41 +17,22 @@ function showTab2(tabId2) {
 }
 
 
-let stream;
-
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('startButton').addEventListener('click', function() {
-                // Verifica que el navegador soporta la API de MediaDevices
-                if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-                    // Solicita acceso a la cámara web
-                    navigator.mediaDevices.getUserMedia({ video: true })
-                        .then(function(mediaStream) {
-                            stream = mediaStream;
-                            // Obtiene el elemento de video
-                            var video = document.getElementById('video');
-                            // Enlaza la transmisión de video al elemento de video
-                            video.srcObject = stream;
-                            video.play();
-                        })
-                        .catch(function(error) {
-                            console.log("Error al acceder a la cámara web: ", error);
-                        });
-                } else {
-                    console.log("La API de MediaDevices no es soportada por este navegador.");
-                }
-            });
-
-            document.getElementById('stopButton').addEventListener('click', function() {
-                if (stream) {
-                    // Detiene cada track de la transmisión
-                    stream.getTracks().forEach(track => track.stop());
-                    // Detiene la reproducción del video
-                    var video = document.getElementById('video');
-                    video.srcObject = null;
-                }
-            });
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // Solicita acceso a la cámara web
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+            // Obtiene el elemento de video
+            var video = document.getElementById('video');
+            // Enlaza la transmisión de video al elemento de video
+            video.srcObject = stream;
+            video.play();
+        })
+        .catch(function(error) {
+            console.log("Error al acceder a la cámara web: ", error);
         });
-
+} else {
+    console.log("La API de MediaDevices no es soportada por este navegador.");
+}
 
 let stream2;
 document.addEventListener('DOMContentLoaded', function() {
