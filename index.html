@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/styles.css">
+    <script src="Script/Script.js"></script>
+</head>
+<body>
+    <h1>Módulo de Certificado Digital de Discapacidad</h1>
+
+    <div class="nav-bg">
+        <nav class="nav_Principal">
+            <a href="#">Médico Evaluador</a>
+            <a href="#">Información adicional</a>
+        </nav>
+    </div>
+    <main>
+        <h2>Ingresar datos</h2>
+        <form action="">
+            <div class="tab-container">
+
+                <div class="tabs">
+                    <div class="tab active" onclick="showTab('form1')">Fase 1</div>
+                    <div class="tab" onclick="showTab('form2')">Fase 2</div>
+                    <div class="tab" onclick="showTab('form3')">Fase 3</div>
+                </div>
+
+                <div class="tab-content active" id="form1">
+                    
+                    
+                    <div class="tab-container2">
+
+                        <div class="tabs2">
+                            <div class="tab2 active2" onclick="showTab2('form12')">Registro por DNI</div>
+                            <div class="tab2" onclick="showTab2('form22')">Registro Biométrico</div>
+                            <div class="tab2" onclick="showTab2('form32')">Reconocimiento de voz</div>
+                        </div>
+            
+                        <div class="tab-content2 active2" id="form12">
+                            <fieldset class="border grid-index_fieldset1">
+                                <legend>Datos personales</legend>
+                                <div class="pad-20">
+                                    <label class="pad-r30">DNI:</label> <input type="number" name="" id="" class="input label-posicion">
+                                </div>
+                                <div class="pad-20">
+                                    <label class="pad-r10">Nombres:</label> <input type="text" name="" id="" class="input label-posicion">
+                                </div>
+                                <div class="pad-20">
+                                    <label>Primer apellido:</label> <input type="text" name="" id="" class="input label-posicion">
+                                </div>
+                                <div class="pad-20">
+                                    <label>Segundo apellido:</label> <input type="text" name="" id="" class="input label-posicion">
+                                </div>
+                                <div class="pad-20 flex-top-center">
+                                    <label class="pad-r20">Género:</label>
+                                    <input type="radio" name="gen" id="cbxMAS" class="ui-checkbox"><label for="cbxMAS">Masculino</label>
+                                    <input type="radio" name="gen" id="cbxFEM" class="ui-checkbox"><label for="cbxFEM">Femenino</label>
+                                </div>
+                                <div class="pad-20">
+                                    <label class="pad-r15">Teléfono:</label> <input type="number" name="" id="" class="input">
+                                </div>
+                                <div class="pad-20">
+                                    <label class="pad-r30">Direccion:</label> <input type="text" name="" id="" class="input">
+                                </div>
+                                <div class="pad-20">
+                                    <label class="pad-r70">Correo:</label> <input type="email" name="" id="" class="input">
+                                </div>
+                            </fieldset>
+                            <br>
+                            <fieldset class="border grid-evaluador_fieldset2">
+                                <legend>Información médica</legend>
+                                <div class="pad-20 flex">
+                                    <label class="pad-r125">Descripcion de las limitaciones funcionales:</label>
+                                    <textarea name="" id="" class="input"></textarea>
+                                    <br>
+                                </div>
+                
+                
+                                <div class="pad-20 flex-top-center">
+                                    <label class="pad-r125">Tipo de diagnóstico:</label>
+                                    <input type="radio" name="diag" id="" class="ui-checkbox"><label for="" class="pad-r70">Definitivo</label>
+                                    <input type="radio" name="diag" class="ui-checkbox"><label for="">Presuntivo</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        
+            
+                        <div class="tab-content2" id="form22">
+            
+                            <!--Camara-->
+                            <div class="flex-center">
+                                <div class="flex pad-b30">
+                                        <button id="startButton" class="button2">Iniciar Cámara</button>
+                                </div>
+                                
+                                <div class="border pad-30">
+                                    <video id="video" width="640" height="480" class="flex-center" autoplay></video>
+                                </div>
+                                <div class="pad-t30">
+                                    <button id="stopButton" class="button2">Detener Cámara</button>
+                                </div>
+                            </div>
+                            <br>
+                            
+                            <fieldset class="border grid-index_fieldset1">
+                                <legend>Datos personales</legend>
+                                <div class="pad-20">
+                                    <label class="pad-r30">DNI:</label> <input type="number" name="" id="" class="input label-posicion">
+                                </div>
+                                <div class="pad-20">
+                                    <label class="pad-r10">Nombres:</label> <input type="text" name="" id="" class="input label-posicion">
+                                </div>
+                                <div class="pad-20">
+                                    <label>Primer apellido:</label> <input type="text" name="" id="" class="input label-posicion">
+                                </div>
+                                <div class="pad-20">
+                                    <label>Segundo apellido:</label> <input type="text" name="" id="" class="input label-posicion">
+                                </div>
+                                <div class="pad-20 flex-top-center">
+                                    <label class="pad-r20">Género:</label>
+                                    <input type="radio" name="gen" id="cbxMAS" class="ui-checkbox"><label for="cbxMAS">Masculino</label>
+                                    <input type="radio" name="gen" id="cbxFEM" class="ui-checkbox"><label for="cbxFEM">Femenino</label>
+                                </div>
+                                <div class="pad-20">
+                                    <label class="pad-r15">Teléfono:</label> <input type="number" name="" id="" class="input">
+                                </div>
+                                <div class="pad-20">
+                                    <label class="pad-r30">Direccion:</label> <input type="text" name="" id="" class="input">
+                                </div>
+                                <div class="pad-20">
+                                    <label class="pad-r70">Correo:</label> <input type="email" name="" id="" class="input">
+                                </div>
+                            </fieldset>
+                            
+            
+                            
+                        </div>
+            
+            
+                        <div class="tab-content2" id="form32">
+            
+                            <!--Microfono-->
+                            <div class="flex-center">
+                                <div class="flex pad-b30">
+                                    <button id="micStartButton" class="button2">Iniciar Micrófono</button>
+                                </div>
+                                
+                                <div class="border">
+                                    <audio id="audio" controls></audio>
+                                </div>
+                                <div class="pad-l20 pad-t30">
+                                    <button id="micStopButton" class="button2">Detener Micrófono</button>
+                                </div>
+                                
+                            </div>
+            
+            
+                            <br>
+                            <fieldset class="border grid-index_fieldset1">
+                                <legend>Datos personales</legend>
+                                <div class="pad-20">
+                                    <label class="pad-r30">DNI:</label> <input type="number" name="" id="" class="input label-posicion">
+                                </div>
+                                <div class="pad-20">
+                                    <label class="pad-r10">Nombres:</label> <input type="text" name="" id="" class="input label-posicion">
+                                </div>
+                                <div class="pad-20">
+                                    <label>Primer apellido:</label> <input type="text" name="" id="" class="input label-posicion">
+                                </div>
+                                <div class="pad-20">
+                                    <label>Segundo apellido:</label> <input type="text" name="" id="" class="input label-posicion">
+                                </div>
+                                <div class="pad-20 flex-top-center">
+                                    <label class="pad-r20">Género:</label>
+                                    <input type="radio" name="gen" id="cbxMAS" class="ui-checkbox"><label for="cbxMAS">Masculino</label>
+                                    <input type="radio" name="gen" id="cbxFEM" class="ui-checkbox"><label for="cbxFEM">Femenino</label>
+                                </div>
+                                <div class="pad-20">
+                                    <label class="pad-r15">Teléfono:</label> <input type="number" name="" id="" class="input">
+                                </div>
+                                <div class="pad-20">
+                                    <label class="pad-r30">Direccion:</label> <input type="text" name="" id="" class="input">
+                                </div>
+                                <div class="pad-20">
+                                    <label class="pad-r70">Correo:</label> <input type="email" name="" id="" class="input">
+                                </div>
+                            </fieldset>
+            
+                        </div>
+                        
+                        <div class="button-class">
+                            <input type="submit" value="Enviar" class="button2">
+                        </div>
+            
+                    </div>
+
+
+
+
+
+
+
+
+
+                    
+                </div>
+                
+    
+                <div class="tab-content" id="form2">
+                    <fieldset class="border grid-evaluador_fieldset2">
+                        <legend>Verificacion historia clínica</legend>
+                        
+                        <div class="pad-20 flex-top-center">
+                            <label class="pad-r180">Nombre del médico: </label>
+                            <input type="text" class="input">
+                        </div>
+
+
+                        <div class="pad-20 flex-top-center">
+                            <label class="pad-r160">Fecha de diagnóstico</label>
+                            <input type="radio" name="resultados" id="" class="ui-checkbox"><label for="">Corresponde</label>
+                            <input type="radio" name="resultados" id="" class="ui-checkbox"><label for="">No Corresponde</label>
+                        </div>
+        
+                        <div class="pad-20 flex">
+                            <label class="pad-r70">Observaciones (Requiere evaluación):</label>
+                            <textarea name="" id="" class="input"></textarea>
+                        </div>
+        
+        
+                        <div class="pad-20">
+                            <label class="pad-r70">Firma digital del médico tratante:</label>
+                            <input
+                                class="w-full rounded-md border border-blue-300 border-input bg-white text-sm text-gray-400 file:border-0 file:bg-blue-600 file:text-white file:text-sm file:font-medium"
+                                type="file"
+                                id="picture"
+                            />
+                        </div>
+        
+        
+                        <div class="pad-20">
+                            <label class="pad-r90">Firma digital del representate legal:</label>
+                            <input
+                                class="w-full rounded-md border border-blue-300 border-input bg-white text-sm text-gray-400 file:border-0 file:bg-blue-600 file:text-white file:text-sm file:font-medium"
+                                type="file"
+                                id="picture"
+                            />
+                            <br>
+                        </div>
+        
+                        
+                    </fieldset>
+                    <div class="button-class">
+                        <input type="submit" value="Emitir Certificado" class="button2">
+                    </div>
+                </div>
+
+
+                <div class="tab-content" id="form3">
+                    <h2>Formulario 3</h2>
+                    <label for="address">Dirección:</label>
+                    <input type="text" id="address" name="address" class="input"><br><br>
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" class="input"><br><br>
+                    <div class="button-class">
+                        <input type="submit" value="Emitir Certificado" class="button2">
+                    </div>
+                </div>
+
+
+            </div>
+        </form>
+    </main>
+    
+</body>
+</html>
