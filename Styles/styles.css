@@ -120,6 +120,14 @@ h1 {
   padding-right: 135px;
 }
 
+.pad-r160 {
+  padding-right: 160px;
+}
+
+.pad-r170 {
+  padding-right: 170px;
+}
+
 
 .pad-r172 {
   padding-right: 168px;
@@ -131,6 +139,15 @@ h1 {
 
 .pad-r180 {
   padding-right: 175px;
+}
+
+.pad-r190 {
+  padding-right: 190px;
+}
+
+
+.pad-r200 {
+  padding-right: 200px;
 }
 
 
