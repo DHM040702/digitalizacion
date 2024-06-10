@@ -55,7 +55,7 @@ let stream;
 
 let stream2;
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('form32').addEventListener('click', function() {
+    document.getElementById('cuadro-audio').addEventListener('click', function() {
         // Verifica que el navegador soporta la API de MediaDevices
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             // Solicita acceso al micrófono
